@@ -9,7 +9,7 @@
 #include <sstream>
 #include "Garage.h"
 #include "View.h"
-#include "Tester.h"
+#include "../test/Tester.h"
 
 using namespace std;
 

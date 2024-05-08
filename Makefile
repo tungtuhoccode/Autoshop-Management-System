@@ -1,6 +1,10 @@
-objects = main.o Control.o View.o Garage.o Entity.o RepairList.o Repair.o Mechanic.o Customer.o Car.o Tester.o
-testobjects = test.o TestControl.o  View.o Garage.o Entity.o RepairList.o Repair.o Mechanic.o Customer.o Car.o Tester.o
+objects = build/main.o build/Control.o build/View.o build/Garage.o build/Entity.o build/RepairList.o build/Repair.o build/Mechanic.o build/Customer.o build/Car.o build/Tester.o
+testobjects = build/test.o build/TestControl.o build/View.o build/Garage.o build/Entity.o build/RepairList.o build/Repair.o build/Mechanic.o build/Customer.o build/Car.o build/Tester.o
 compiler = g++ -std=c++11
+
+TestDir = ./test
+SourceDir = ./src
+BuildDir = ./build
 
 all : a3 a3test 
 
@@ -10,45 +14,45 @@ a3test: $(testobjects)
 a3: $(objects)
 	${compiler} -o a3 $(objects) 
 
-main.o: main.cc Control.h 
-	${compiler} -c main.cc 
+build/main.o: ${SourceDir}/main.cc ${SourceDir}/Control.h 
+	${compiler} -c ${SourceDir}/main.cc -o build/main.o
 
-test.o: test.cc TestControl.h
-	${compiler} -c test.cc
+build/test.o: ${TestDir}/test.cc ${TestDir}/TestControl.h
+	${compiler} -c ${TestDir}/test.cc -o build/test.o
 
-Control.o: Control.h Control.cc
-	${compiler} -c Control.cc
+build/Control.o: ${SourceDir}/Control.h ${SourceDir}/Control.cc
+	${compiler} -c ${SourceDir}/Control.cc -o build/Control.o
 
-TestControl.o: TestControl.cc TestControl.h
-	${compiler} -c TestControl.cc
+build/TestControl.o: ${TestDir}/TestControl.cc ${TestDir}/TestControl.h
+	${compiler} -c ${TestDir}/TestControl.cc -o build/TestControl.o
 	
-View.o: View.cc View.h
-	${compiler} -c View.cc
+build/View.o: ${SourceDir}/View.cc ${SourceDir}/View.h
+	${compiler} -c ${SourceDir}/View.cc -o build/View.o
 	
-Garage.o: Garage.cc Garage.h
-	${compiler} -c Garage.cc
+build/Garage.o: ${SourceDir}/Garage.cc ${SourceDir}/Garage.h
+	${compiler} -c ${SourceDir}/Garage.cc -o build/Garage.o
 
-Entity.o: Entity.cc Entity.h
-	${compiler} -c Entity.cc
+build/Entity.o: ${SourceDir}/Entity.cc ${SourceDir}/Entity.h
+	${compiler} -c ${SourceDir}/Entity.cc -o build/Entity.o
 
-Car.o: Car.cc Car.h
-	${compiler} -c Car.cc
+build/Car.o: ${SourceDir}/Car.cc ${SourceDir}/Car.h
+	${compiler} -c ${SourceDir}/Car.cc -o build/Car.o 
 
-RepairList.o: RepairList.h RepairList.cc
-	${compiler} -c RepairList.cc
+build/RepairList.o: ${SourceDir}/RepairList.h ${SourceDir}/RepairList.cc
+	${compiler} -c ${SourceDir}/RepairList.cc -o build/RepairList.o 
 
-Repair.o: Repair.h Repair.cc
-	${compiler} -c Repair.cc
+build/Repair.o: ${SourceDir}/Repair.h ${SourceDir}/Repair.cc
+	${compiler} -c ${SourceDir}/Repair.cc -o build/Repair.o
 
-Mechanic.o: Mechanic.cc Mechanic.h Entity.h
-	${compiler} -c Mechanic.cc 
+build/Mechanic.o: ${SourceDir}/Mechanic.cc ${SourceDir}/Mechanic.h ${SourceDir}/Entity.h
+	${compiler} -c ${SourceDir}/Mechanic.cc -o build/Mechanic.o
 
-Customer.o: Customer.cc Customer.h 
-	${compiler} -c Customer.cc
+build/Customer.o: ${SourceDir}/Customer.cc ${SourceDir}/Customer.h 
+	${compiler} -c ${SourceDir}/Customer.cc -o build/Customer.o
 
-Tester.o: Tester.cc Tester.h
-	${compiler} -c Tester.cc
+build/Tester.o: ${TestDir}/Tester.cc ${TestDir}/Tester.h
+	${compiler} -c ${TestDir}/Tester.cc -o build/Tester.o
 	
-
 clean:
-	rm -f a3 a3test *.o
+	cd build; 
+	rm -f a3 a3test *.o; 
