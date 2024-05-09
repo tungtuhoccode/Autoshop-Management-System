@@ -1,4 +1,4 @@
-#include "Mechanic.h"
+#include "../include/Mechanic.h"
 
 const char Mechanic::code = 'M';
 int Mechanic::nextId = 1;

@@ -3,7 +3,7 @@ using namespace std;
 #include <string>
 #include <vector>
 
-#include "View.h"
+#include "../include/View.h"
 
 void View::menu(const vector<string>& menu, int& choice)
 {

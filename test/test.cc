@@ -1,4 +1,4 @@
-#include "TestControl.h"
+#include "../include/TestControl.h"
 
 int main(){
     TestControl control;

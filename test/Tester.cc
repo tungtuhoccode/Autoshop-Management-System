@@ -1,4 +1,4 @@
-#include "Tester.h"
+#include "../include/Tester.h"
 
 // strangely difficult to get this to work correctly
 void Tester::pressEnterToContinue(){

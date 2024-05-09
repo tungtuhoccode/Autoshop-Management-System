@@ -5,8 +5,8 @@
 #include <string>
 #include <vector>
 
-#include "../src/Garage.h"
-#include "../src/View.h"
+#include "Garage.h"
+#include "View.h"
 #include "Tester.h"
 
 using namespace std;

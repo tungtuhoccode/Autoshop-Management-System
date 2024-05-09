@@ -1,4 +1,4 @@
-#include "Entity.h"
+#include "../include/Entity.h"
 
 Entity::Entity(char code, int num, const string& name): name(name), id(code + to_string(num)){
 }

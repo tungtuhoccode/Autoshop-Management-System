@@ -1,6 +1,6 @@
 
-#include "Repair.h"
-#include "Garage.h"
+#include "../include/Repair.h"
+#include "../include/Garage.h"
 
 const string Repair::NOTCOMPLETE = "not complete";
 

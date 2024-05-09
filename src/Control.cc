@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "Control.h"
+#include "../include/Control.h"
 
 
 const vector<string> Control::menu ={

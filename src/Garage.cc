@@ -1,5 +1,5 @@
 
-#include "Garage.h"
+#include "../include/Garage.h"
 
 
 const string Garage::REPAIRS[NUM_REPAIRS] = {"Oil Change", "Brake Check", "Tire Rotation", "Battery Check", "Air Filter Replacement", "Coolant Flush", "Transmission Flush", "A/C Recharge", "Engine Diagnostic", "Brake Pad Replacement"};

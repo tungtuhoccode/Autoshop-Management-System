@@ -1,4 +1,4 @@
-#include "Customer.h"
+#include "../include/Customer.h"
 
 const char Customer::code = 'C';
 int Customer::nextId = 1;
